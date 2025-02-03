@@ -1,4 +1,4 @@
-# Projects and Tasks Manager
+# Projects and Tasks Manager App
 
 A ReactJS-based project and task management application that enables users to create, edit, and manage projects and tasks using Supabase as the backend and Redux for state management.
 
