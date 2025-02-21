@@ -39,15 +39,18 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-blue-600 text-white">
+    <header className="bg-navyBlue text-white">
       <div className="container mx-auto flex justify-between items-center p-4">
-        <Link to="/" className="text-2xl font-bold hover:opacity-90">
-          Projects &amp; Tasks Manager
+        <Link
+          to="/ProjectsAndTasks/"
+          className="text-2xl font-bold hover:opacity-90"
+        >
+          Projects &amp; Tasks
         </Link>
         {!homePage && (
           <Link
             to="/ProjectsAndTasks/"
-            className="px-4 py-2 bg-white text-blue-600 font-semibold rounded hover:bg-gray-200"
+            className="px-4 py-2 bg-white text-navyBlue font-semibold rounded-xl hover:bg-gray-200"
           >
             See All Projects
           </Link>
@@ -55,7 +58,7 @@ const Header = () => {
         {homePage && (
           <button
             onClick={() => setIsModalOpen(true)}
-            className="px-4 py-2 bg-white text-blue-600 font-semibold rounded hover:bg-gray-200"
+            className="px-4 py-2 bg-white text-navyBlue font-semibold rounded-xl hover:bg-gray-200"
           >
             Add Project
           </button>
@@ -72,18 +75,18 @@ const Header = () => {
               value={newProject.name}
               onChange={handleInputChange}
               placeholder="Project Name"
-              className="w-full p-2 mb-4 border border-gray-300 rounded"
+              className="w-full p-2 mb-4 border border-gray-300 rounded-xl"
             />
             <textarea
               name="description"
               value={newProject.description}
               onChange={handleInputChange}
               placeholder="Project Description"
-              className="w-full p-2 mb-4 border border-gray-300 rounded"
+              className="w-full p-2 mb-4 border border-gray-300 rounded-xl"
             />
             <button
               onClick={handleCreateProject}
-              className="px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700"
+              className="px-4 py-2 bg-navyBlue text-white font-semibold rounded-xl hover:bg-blue-700"
             >
               Create Project
             </button>

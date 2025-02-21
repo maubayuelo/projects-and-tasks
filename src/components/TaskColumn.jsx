@@ -11,7 +11,7 @@ const TaskColumn = ({ tasks, onEditTask, dateline, status }) => {
 
   return (
     <div className="bg-gray-100 rounded-lg px-2 pt-2 pb-3">
-      <h2 className="text-lg font-bold text-blue-600 mb-2">{status}</h2>
+      <h2 className="text-lg font-bold text-navyBlue mb-2">{status}</h2>
       <div className="space-y-2">
         {sortedTasks.length > 0 ? (
           sortedTasks.map((task) => (

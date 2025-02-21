@@ -9,7 +9,7 @@ const ProjectCard = ({ project }) => {
   }
 
   return (
-    <div className="bg-white shadow-sm rounded p-4">
+    <div className="bg-white shadow-sm rounded-xl p-4">
       <h2 className="text-xl font-bold">{project.name}</h2>
       <p className="text-gray-600 mt-2">{project.description}</p>
       <Link

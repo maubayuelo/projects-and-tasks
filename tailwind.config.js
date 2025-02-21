@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        navyBlue: "#13293d",
+      },
       fontFamily: {
         sans: ['Inter', 'sans-serif'], // Replace system-ui with Inter
       },

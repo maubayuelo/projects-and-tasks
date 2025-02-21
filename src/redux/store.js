@@ -43,9 +43,11 @@ export const addProjectToBackend = createAsyncThunk(
 export const deleteProject = createAsyncThunk(
   "projects/deleteProject",
   async (id, { rejectWithValue }) => {
+    console.log("Deleting task with ID:", id);
     const { error } = await supabase.from("projects").delete().eq("id", id);
 
     if (error) {
+      console.error("Error deleting task:", error.message);
       return rejectWithValue(error.message);
     }
 

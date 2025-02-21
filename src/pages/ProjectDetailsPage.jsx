@@ -163,7 +163,8 @@ const ProjectDetailsPage = () => {
     const { error } = await supabase
       .from("tasks")
       .delete()
-      .eq("id", editTaskData.id);
+      .eq("id", editTaskData.id)
+      .select(); // Select to confirm the deletion
 
     if (error) {
       console.error("Error deleting task:", error.message);
@@ -194,13 +195,13 @@ const ProjectDetailsPage = () => {
         <div className="flex flex-row items-center space-x-6">
           <button
             onClick={() => setIsEditProjectModalOpen(true)}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            className="bg-navyBlue text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition"
           >
             Edit Project
           </button>
           <button
             onClick={() => setIsNewTaskModalOpen(true)}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            className="bg-navyBlue text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition"
           >
             Add A New Task
           </button>

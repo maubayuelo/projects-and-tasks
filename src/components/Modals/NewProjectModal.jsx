@@ -21,7 +21,7 @@ const NewProjectModal = ({
             setProjectData({ ...projectData, name: e.target.value })
           }
           placeholder="Project Name"
-          className="w-full px-4 py-2 border rounded mb-4"
+          className="w-full px-4 py-2 border rounded-xl mb-4"
         />
         <textarea
           value={projectData.description}
@@ -29,11 +29,11 @@ const NewProjectModal = ({
             setProjectData({ ...projectData, description: e.target.value })
           }
           placeholder="Project Description"
-          className="w-full px-4 py-2 border rounded mb-4"
+          className="w-full px-4 py-2 border rounded-xl mb-4"
         ></textarea>
         <button
           onClick={onAdd}
-          className="bg-blue-600 px-4 py-2 text-white mr-2"
+          className="bg-navyBlue px-4 py-2 text-white mr-2 hover:bg-gray-200"
         >
           Add
         </button>
