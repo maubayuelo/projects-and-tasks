@@ -38,12 +38,25 @@ cd projects-and-tasks
 npm install
 ```
 
-### 3. Supabase configuration
+### 3. Configure Supabase
 
-No environment file is required to run the app. The Supabase project URL and
-anon key are currently hardcoded in `src/redux/supabaseClient.js`. To point the
-app at your own Supabase project, edit the `SUPABASE_URL` and `SUPABASE_ANON_KEY`
-constants in that file.
+Create a `.env.local` file in the project root with your Supabase project
+credentials:
+
+```sh
+VITE_SUPABASE_URL=your-supabase-project-url
+VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+
+You can copy `.env.example` as a starting point:
+
+```sh
+cp .env.example .env.local
+```
+
+Both variables are read in `src/redux/supabaseClient.js`. Vite only exposes
+variables prefixed with `VITE_`, and it reads `.env.local` automatically at
+startup. `.env.local` is gitignored — never commit real credentials.
 
 ### 4. Start the development server
 
