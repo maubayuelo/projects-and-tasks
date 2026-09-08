@@ -85,16 +85,6 @@ prints that instead.
 3. Deploy the contents of `dist/` using Vercel, Netlify, or any hosting provider
    of your choice.
 
-## How to Contribute
-
-If you'd like to contribute, please follow these steps:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-branch`)
-3. Make your changes and commit (`git commit -m 'Add new feature'`)
-4. Push to the branch (`git push origin feature-branch`)
-5. Open a Pull Request
-
 ## License
 
-This project is licensed under the MIT License.
+Made By Mauricio Bayuelo.
