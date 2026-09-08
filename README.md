@@ -14,54 +14,63 @@ A ReactJS-based project and task management application that enables users to cr
 ## Tech Stack
 
 - **Frontend:** React, Redux Toolkit, React Router, Tailwind CSS
+- **Build tool:** Vite
 - **Backend:** Supabase (PostgreSQL)
+
+## Requirements
+
+- Node.js 18 or newer, and npm
 
 ## Installation
 
-Follow these steps to set up the project locally:
+Follow these steps from zero to a running app:
 
-### 1. Clone this repository:
+### 1. Clone this repository
 
 ```sh
 git clone https://github.com/maubayuelo/projects-and-tasks.git
-cd projects-and-tasks-manager
+cd projects-and-tasks
 ```
 
-### 2. Install dependencies:
+### 2. Install dependencies
 
 ```sh
 npm install
 ```
 
-### 3. Set up Supabase
+### 3. Supabase configuration
 
-Create a `.env.local` file in the root directory and add the following environment variables:
+No environment file is required to run the app. The Supabase project URL and
+anon key are currently hardcoded in `src/redux/supabaseClient.js`. To point the
+app at your own Supabase project, edit the `SUPABASE_URL` and `SUPABASE_ANON_KEY`
+constants in that file.
 
-```sh
-REACT_APP_SUPABASE_URL=your-supabase-url
-REACT_APP_SUPABASE_ANON_KEY=your-supabase-anon-key
-```
-
-Replace `your-supabase-url` and `your-supabase-anon-key` with your actual Supabase project details.
-
-### 4. Start the development server:
+### 4. Start the development server
 
 ```sh
-npm start
+npm run dev
 ```
 
-The app will run on `http://localhost:3000/`
+Vite prints the local URL on start. With the current config it is
+`http://localhost:5173/ProjectsAndTasks/` (the base path is set in
+`vite.config.js`). If port 5173 is in use, Vite picks the next free port and
+prints that instead.
 
 ## Deployment
-
-To deploy the application, follow these steps:
 
 1. Build the app:
    ```sh
    npm run build
    ```
+   The production build is written to `dist/`.
 
-2. Deploy using Vercel, Netlify, or any hosting provider of your choice.
+2. Preview the build locally (optional):
+   ```sh
+   npm run preview
+   ```
+
+3. Deploy the contents of `dist/` using Vercel, Netlify, or any hosting provider
+   of your choice.
 
 ## How to Contribute
 
